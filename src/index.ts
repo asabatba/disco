@@ -1,5 +1,4 @@
 
-import Option from 'fp-ts/lib/Option';
 import ws from 'ws';
 
 // const server = http.createServer((req, res) =>
@@ -12,22 +11,6 @@ const wsServer = new ws.Server({
 });
 
 // const wsServer = new ws.Server({ server: server });
-
-const prop = (obj: { [k: string]: any; }) => (prop: string) => obj[prop];
-
-const parseJson = (str: ws.Data) => {
-
-    if (typeof str != 'string')
-        return Option.none;
-
-    try {
-        const parsed = JSON.parse(str);
-        return Option.some(parsed);
-    } catch (err) {
-        return Option.none;
-    }
-};
-
 
 const letters = {
     /*
