@@ -7,7 +7,7 @@ import ws from 'ws';
 // server.listen(process.env.DISCO_PORT ?? 9000);
 
 const wsServer = new ws.Server({
-    port: parseInt(process.env.DISCO_PORT ?? '9000'),
+    port: parseInt(process.env.DISCO_PORT ?? '3000'),
 });
 
 // const wsServer = new ws.Server({ server: server });
